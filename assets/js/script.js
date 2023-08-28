@@ -9,7 +9,6 @@ const btnVerifica = document.getElementById('btnVerifica');
 btnVerifica.addEventListener("click", verificaMail);
 
 
-
 function lancioDadi() {
 
     // Creazione variabile con numero lanci
@@ -51,14 +50,18 @@ function verificaMail() {
     const mailList = ['gianluca.vallese@hotmail.com', 'g.vallese@gmail.com', 'vallesegianluca@libero.it', 'gianlucav@yahoo.com'];
     // Creazione variabile con la mail in input
     const inputMail = document.getElementById('inputMail').value;
+    // variabile
+    const divElem = document.getElementById('risultatoMail');
     // Ciclo di confronto con tutte le mail    
     for (let i = 0; i< mailList.length; i++) {
         if (inputMail == mailList[i]) {
             console.log('mail presente nella mailing list');
+            divElem.insertAdjacentHTML('beforeend',`<div>${inputMail} presente nella mailing list</div>`);
         } else {
             let a = mailList.length-1;
             if (i == a) {
                 console.log('mail non presente');
+                divElem.insertAdjacentHTML('beforeend',`<div>${inputMail} non presente nella mailing list</div>`);
             }
         }
     }

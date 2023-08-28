@@ -10,31 +10,37 @@
 </head>
 <body>
 
-    <main class="container">
+    <main class="container py-3">
 
         <!-- Lancio dadi -->
-        <div class="py-3">
-            <h2>Dgitare il numero di lanci da effettuare e cliccare il bottone</h2>
-            <input type="number" id="numLanci">
-            <button id="btnDadi">Avvia lanci dei dadi</button>
-            <div class="pt-3">
+        <div class="px-1 py-3 bg-primary-subtle rounded">
+            <h2 class="text-center">
+                Dgitare il numero di lanci da effettuare e cliccare il bottone
+            </h2>
+            <div class="py-3">
+                <input type="number" id="numLanci" class="mx-1">
+                <button id="btnDadi">Avvia lanci dei dadi</button>
+            </div>
+            <div>
                 <h3>
                     Risultati
                 </h3>
-                <div class="risultati">
-                    <ul>
-
-                    </ul>
+                <div>
+                    <ul></ul>
                 </div>
             </div>
-            
         </div>
     
         <!-- Verifica mail -->
-        <div class="py-3 mt-4">
-            <h2>Dgitare la propria mail e verificare se fa parte della lista</h2>
-            <input type="mail" id="inputMail">
-            <button id="btnVerifica">verifica mail</button>
+        <div class="px-1 py-3 mt-4 bg-success-subtle rounded">
+            <h2 class="text-center">Dgitare la propria mail e verificare se fa parte della lista</h2>
+            <div class="py-3">
+                <input type="mail" id="inputMail" class="mx-1">
+                <button id="btnVerifica">Verifica mail</button>
+            </div>
+            <div id="risultatoMail">
+
+            </div>
         </div>
 
     </main>
