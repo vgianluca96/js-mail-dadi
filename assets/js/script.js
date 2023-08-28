@@ -14,6 +14,8 @@ function lancioDadi() {
 
     // Creazione variabile con numero lanci
     const numLanci = document.getElementById('numLanci').value;
+    // elemento ul
+    const ulElem = document.querySelector('ul');
     // Ciclo che simula i vari lanci
     for (let i = 1; i <= numLanci; i++) {
         // Creazione numeri
@@ -25,10 +27,20 @@ function lancioDadi() {
         //Confronto risultati
         if (numGiocatore > numComputer) {
             console.log(numGiocatore,numComputer,'vince Giocatore');
+            // Aggiunta risultato in pagina
+            let risultato = `<li>Lancio ${i} - Giocatore: ${numGiocatore}; Computer: ${numComputer} - vince Giocatore</li>`;
+            ulElem.insertAdjacentHTML('beforeend',risultato);
         } else if (numGiocatore < numComputer) {
             console.log(numGiocatore,numComputer,'vince Computer');
-        } else console.log(numGiocatore,numComputer,'pari');
-    
+            // Aggiunta risultato in pagina
+            let risultato = `<li>Lancio ${i} - Giocatore: ${numGiocatore}; Computer: ${numComputer} - vince Computer</li>`;
+            ulElem.insertAdjacentHTML('beforeend',risultato);
+        } else {
+            console.log(numGiocatore,numComputer,'pari');
+            // Aggiunta risultato in pagina
+            let risultato = `<li>Lancio ${i} - Giocatore: ${numGiocatore}; Computer: ${numComputer} - Pareggio</li>`;
+            ulElem.insertAdjacentHTML('beforeend',risultato);
+        }
     }
 }
 
