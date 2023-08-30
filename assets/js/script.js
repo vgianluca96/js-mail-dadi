@@ -36,23 +36,26 @@ const mailList = ['gianluca.vallese@hotmail.com', 'g.vallese@gmail.com', 'valles
 //const inputMail = 'gianluca.vallese@hotmail.com';
 const inputMail = 'gianlucav@yahoo.com';
 
-// variabile che impedisce di scrivere 'mail Y non presente' nel caso in cui Y sia verificata
-let x;
+// variabile di appoggio
+let trovato = false;
 
 // Ciclo di confronto con tutte le mail    
 for (let i = 0; i< mailList.length; i++) {
     
     if (inputMail == mailList[i]) {
         
-        console.log('mail presente nella mailing list');
-        x = true;
+        trovato = true;
 
-    } else if (x != true) {
-        
-        let a = mailList.length-1;
-        if (i == a) {
-            console.log('mail non presente');
-            
-        }
     }
+}
+
+// Stampa risultato
+if (trovato) {
+        
+    console.log('mail presente nella mailing list');
+    
+} else {
+    
+    console.log('mail non presente');
+        
 }
